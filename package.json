@@ -2,7 +2,7 @@
     "name": "react-ecommerce",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://github.com/amiroous/react-ecommerce/",
+    "homepage": "https://amiroous.github.io/react-ecommerce/",
     "dependencies": {
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.3.2",
