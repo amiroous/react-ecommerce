@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import NavBar from "../components/NavBar";
-import CategoryCardGroup from "../components/CategoryCardGroup";
+import NavBar from "components/NavBar/NavBar";
+import Catalog from "components/Catalog/Catalog";
 
 const HomePage = () => {
     return (
@@ -8,7 +8,7 @@ const HomePage = () => {
             <NavBar/>
             <div className="container-fluid page-home">
                 <h1 className="text-primary display-4 my-3">Online Tech Courses</h1>
-                <CategoryCardGroup/>
+                <Catalog/>
             </div>
         </Fragment>
     );

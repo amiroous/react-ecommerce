@@ -1,0 +1,12 @@
+.catalog {
+
+    &-item {
+        flex: 1 1 400px;
+        margin: 15px;
+
+        &-img {
+            width: 64px;
+            margin-bottom: inherit;
+        }
+    }
+}

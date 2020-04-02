@@ -1,23 +1,5 @@
 // Override default Bootstrap variables before the import
+$enable-gradients: true;
 
 // Import Bootstrap and its default variables
 @import "~bootstrap/scss/bootstrap";
-
-
-// TODO: Refactor to Use Styled Components
-.category-card-group {
-
-    &,
-    .courses,
-    .categories {
-        display: grid;
-        grid-row-gap: 2rem;
-    }
-
-    .courses {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .categories {
-        grid-template-columns: 1fr 1fr;
-    }
-}
