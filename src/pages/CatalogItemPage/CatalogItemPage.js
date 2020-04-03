@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { IMAGES_URL } from "constants.js";
 import BasePage from "pages/BasePage";
-import { getTechnologies } from "helpers";
+import { getTechnology } from "helpers";
 
 const CatalogItemPage = (route) => {
 
@@ -10,8 +10,8 @@ const CatalogItemPage = (route) => {
     useEffect( () => {
 
         (async () => {
-            const catalogs = await getTechnologies();
-            setCatalog(catalogs.find(tech => tech.id === Number(route.match.params.id)));
+            const catalogs = await getTechnology(route.match.params.id);
+            setCatalog(catalogs);
         })();
 
     }, [route]);
