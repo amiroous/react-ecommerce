@@ -1,14 +1,18 @@
 import React from 'react';
 import 'App.scss';
+import { Route } from "react-router-dom";
+import HomePage from "pages/HomePage/HomePage";
+import CatalogItemPage from "pages/CatalogItemPage/CatalogItemPage";
 
-import HomePage from "pages/Homepage/HomePage";
+const App = () => {
 
-function App() {
   return (
     <div className="app">
-      <HomePage/>
+        <Route exact path="/" component={HomePage} />
+        {/*<Route exact path="/catalog" component={Catalog} />*/}
+        <Route exact path="/catalog/:id" component={CatalogItemPage} />
     </div>
   );
-}
+};
 
 export default App;
