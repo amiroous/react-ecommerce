@@ -3,18 +3,22 @@ import { IMAGES_URL } from "constants.js";
 import BasePage from "pages/BasePage";
 import { getTechnology } from "helpers";
 
-const CatalogItemPage = (route) => {
+const CatalogPage = (route) => {
 
     const [catalog, setCatalog] = useState([]);
 
     useEffect( () => {
 
         (async () => {
-            const catalogs = await getTechnology(route.match.params.id);
-            setCatalog(catalogs);
+            const catalog = await getTechnology(route.match.params.id);
+            setCatalog(catalog);
         })();
 
     }, [route]);
+
+    if(!catalog.id) {
+        return null;
+    }
 
     return (
         <BasePage>
@@ -27,4 +31,4 @@ const CatalogItemPage = (route) => {
     );
 };
 
-export default CatalogItemPage;
+export default CatalogPage;
