@@ -6,7 +6,7 @@ const HomePage = () => {
 
     return (
         <BasePage>
-            <div className="container-fluid page-home text-center">
+            <div className="container page-home text-center">
                 <h1 className="text-primary display-4 my-3">BlueTech <small className="text-muted font-weight-light">Online Tech Courses</small></h1>
                 <Catalog/>
             </div>

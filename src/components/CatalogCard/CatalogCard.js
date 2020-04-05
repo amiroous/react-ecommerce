@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import {IMAGES_URL} from 'constants.js';
 
-const CatalogCard = ({catalogCard, match}) => {
+const CatalogCard = ({catalogCard}) => {
 
     const {id, name, description, image} = catalogCard;
 
@@ -25,4 +25,4 @@ const CatalogCard = ({catalogCard, match}) => {
     );
 };
 
-export default withRouter(CatalogCard);
+export default CatalogCard;
