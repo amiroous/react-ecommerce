@@ -25,12 +25,14 @@ const CatalogPage = (route) => {
 
     return (
         <BasePage>
-            <div className="container-fluid page-home text-center min-vh-100 bg-gradient-info text-white">
-                <h1 className="display-1">{catalog.name}</h1>
-                <p className="mt-3">{catalog.description}</p>
-                <img className="mt-3" src={IMAGES_URL + catalog.image} alt={catalog.description}/>
-                <div className="row catalog">
-                {catalog.courses.map(renderCourse)}
+            <div className="min-vh-100 bg-gradient-info text-white">
+                <div className="page-home text-center container">
+                    <h1 className="display-1">{catalog.name}</h1>
+                    <p className="mt-3">{catalog.description}</p>
+                    <img className="mt-3" src={IMAGES_URL + catalog.image} alt={catalog.description}/>
+                    <div className="row catalog mt-3">
+                        {catalog.courses.map(renderCourse)}
+                    </div>
                 </div>
             </div>
         </BasePage>
