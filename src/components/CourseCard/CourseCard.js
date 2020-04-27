@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 
 const CourseCard = ({courseCard}) => {
 
-    const {id, name, price} = courseCard;
+    const {name, price} = courseCard;
 
     return (
         <div className="catalog-item-wrapper">
@@ -14,7 +14,7 @@ const CourseCard = ({courseCard}) => {
                     </Card.Title>
                 </Card.Body>
                 <Card.Footer className="p-0">
-                    <button onClick={() => console.log(`$${price} Paid for Course ${id}`)}
+                    <button onClick={() => console.log(`Course ${name} ($${price}) Added to Cart`)}
                             className="p-3 btn btn-block btn-secondary text-uppercase" type="button">
                         Buy for ${price}
                     </button>

@@ -3,7 +3,8 @@ import 'App.scss';
 import { Route } from "react-router-dom";
 import HomePage from "pages/HomePage/HomePage";
 import ShopPage from "pages/ShopPage/ShopPage";
-import CatalogPage from "pages/CatalogPage/CatalogPage";
+import CollectionPage from "pages/CollectionPage/CollectionPage";
+import ItemPage from "pages/ItemPage/ItemPage";
 
 const App = () => {
 
@@ -11,7 +12,8 @@ const App = () => {
     <div className="app">
         <Route exact path="/" component={HomePage} />
         <Route exact path="/shop" component={ShopPage} />
-        <Route exact path="/:id/:category" component={CatalogPage} />
+        <Route exact path="/:collectionId" component={CollectionPage} />
+        <Route exact path="/:collectionId/:itemId" component={ItemPage} />
     </div>
   );
 };

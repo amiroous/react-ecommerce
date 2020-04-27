@@ -1,5 +1,13 @@
 // Override default Bootstrap variables before the import
 $enable-gradients: true;
+@import "~bootstrap/scss/vendor/rfs";
+
+.display-5 {
+    $display5-size: 2.0rem !important;
+    $display5-weight: 200 !important;
+    @include font-size($display5-size);
+    font-weight: $display5-weight;
+}
 
 // Import Bootstrap and its default variables
 @import "~bootstrap/scss/bootstrap";
