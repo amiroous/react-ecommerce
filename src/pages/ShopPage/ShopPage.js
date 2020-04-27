@@ -15,7 +15,7 @@ const ShopPage = () => {
     }, []);
 
     if(!collections.length) {
-        return 'null';
+        return null;
     }
 
     return (
