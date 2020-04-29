@@ -3,6 +3,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
+import SignInCta from "components/SignInCta/SignInCta";
+import SignUpCta from "components/SignUpCta/SignUpCta";
 
 const NavBar = ({location}) => {
     
@@ -17,9 +19,17 @@ const NavBar = ({location}) => {
                     <Link className={`nav-link${activeRoute ? '' : ' active'}`} to="/">Home</Link>
                     <Link className={`nav-link${activeRoute === 'shop' ? ' active' : ''}`} to="/shop">Shop</Link>
                 </Nav>
+                <Nav>
+                    <SignInCta/>
+                    <span className="mx-1"></span>
+                    <SignUpCta/>
+                </Nav>
             </Navbar.Collapse>
         </Navbar>
     );
 };
 
 export default withRouter(NavBar);
+
+
+/* TODO: Modal (Sign in Sign Up) */
